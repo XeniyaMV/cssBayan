@@ -19,7 +19,7 @@ h1 {
 }
 
 .main {
-    width: 650px;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -29,7 +29,7 @@ h1 {
     background-color: #265a8a38 ;
     border-radius: 6px;
 
-    font-size: 20px;
+    font-size: 1.4em;
     color: #0b1927d8;
 }
 
@@ -43,7 +43,7 @@ h1 {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    border-radius: 6px;
+    border-radius: 5px;
     margin-top: 5px;
 }
 
@@ -80,20 +80,35 @@ input[type="checkbox"] {
 
 
 .icon {
-    width: 20px;
-    height: 20px;
+
+    width: 1em;
+    height: 1em;
     display: none;
+    transition: width 0s, height 0s linear;
+    
 }
+
 
 
 .main:hover .icon {
     display: block;
+    cursor: pointer;
+
 }
 
-.main:hover > .accordion_container {
+.accordion_container:hover {
     color: #579739fb;
+    cursor: pointer;
 }
 
+/* .item:hover {
+    cursor: pointer;
+} */
+
+
+label:hover {
+    cursor: pointer;
+}
 
 input[type="checkbox"]:checked ~ .meme_image {
     display: block;
@@ -105,12 +120,25 @@ input[type="checkbox"]:checked + .meme_name{
     color: #579739fb;
 }
 
+input[type="checkbox"]:checked + label > .icon{
+    width: 1.2em;
+    height: 1.2em;
+}
 
 label:hover ~ .meme_image {
-
     width: 70%;
     height: 70%;
     transition: width 1.2s, height 1.2s linear;
+    cursor: pointer;
+
+
+}
+
+label:hover .icon {
+    width: 1.2em;
+    height: 1.2em;
+    transition: width 1s, height 1s linear;
+    cursor: pointer;
 
 }
 
