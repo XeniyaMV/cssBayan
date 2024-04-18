@@ -22,7 +22,7 @@ h1 {
 
 .main {
   font-family: 'Special Elite', cursive;
-  width: 50%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
@@ -138,6 +138,38 @@ input[type="radio"]:checked + label > div > .icon{
   color: var(--blue-color);
 }
 
+.footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_contacts {
+  list-style-type: none;
+}
+
+.footer_contacts-item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: monospace;
+  text-decoration: none;
+  color: var(--blue-color);
+  border-bottom: 1px solid transparent;
+
+  transition: border-bottom-color 0.5s;
+}
+
+.footer_contacts-item:hover {
+  border-bottom-color: var(--blue-color);
+}
+
+.footer_icon-wrapper {
+  width: 2rem;
+  height: 2rem;
+}
 /* HOVER */
 @media (hover: hover) {
   .item:hover .meme_image {
@@ -174,6 +206,13 @@ input[type="radio"]:checked + label > div > .icon{
 @media not (hover: hover) {
   .icon {
     visibility: visible;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 821px) and (max-width: 1230px) {
+  .main {
+    width: 70%;
   }
 }
 
